@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,49 +8,17 @@
     <title>Employee Timesheet</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
 </head>
+
 <body>
     <div class="jumbotron text-center col-md-10 offset-1">
         <h1 class="display-3">Employee Timesheet</h1>
     </div>
     <!-- start container for employee form -->
-    <div class="container">
-        <div class="card m-2 mb-4" id="employee-parameters">
-            <!-- start employee form -->
-            <div class="card-header">
-                <span>Add Employee</span>
-            </div>
-            <div class="card-body p-4">
-                <div class="form-group">
-                    <label for="name-employee">Employee Name</label>
-                    <input type="text" class="form-control" id="name-employee" aria-describedby="employeeName"
-                        placeholder="Enter full name" required>
-                </div>
-                <div class="form-group">
-                    <label for="role">Role </label>
-                    <input type="text" class="form-control" id="role" aria-describedby="employeeRole"
-                        placeholder="Enter your role" required>
-                </div>
-                <div class="form-group">
-                    <label for="start-date">Start Date</label>
-                    <input type="date" class="form-control" id="start-date" aria-describedby="startDate" required>
-                </div>
-                <div class="form-group">
-                    <label for="rate">Rate ($/mo)</label>
-                    <input type="number" class="form-control" id="rate" aria-describedby="employeeRate"
-                        placeholder="Enter billable rate per month" required>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
-                        <button type="submit" class="btn btn-primary" id="clear-button">Clear</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /employee form -->
+
+    <!-- /employee form -->
     </div>
     <!-- /emplpoyee form container -->
     <!-- start employee results container -->
@@ -92,16 +60,52 @@
         </div>
         <!-- /emplpoyee results -->
     </div>
-    <!-- /e,plpyee results container -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+
+    <div class="container">
+        <div class="card m-2 mb-4" id="employee-parameters">
+            <!-- start employee form -->
+            <div class="card-header">
+                <span>Add Employee</span>
+            </div>
+            <div class="card-body p-4">
+                <div class="form-group">
+                    <label for="name-employee">Employee Name</label>
+                    <input type="text" class="form-control" id="name-employee" aria-describedby="employeeName"
+                        placeholder="Enter full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role </label>
+                    <input type="text" class="form-control" id="role" aria-describedby="employeeRole" placeholder="Enter your role"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" class="form-control" id="start-date" aria-describedby="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="rate">Rate ($/mo)</label>
+                    <input type="number" class="form-control" id="rate" aria-describedby="employeeRate" placeholder="Enter billable rate per month"
+                        required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="clear-button">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- /e,plpyee results container -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="app.js"></script>
 </body>
+
 </html>
