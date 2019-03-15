@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Employee Timesheet</title>
+    <title>Train Time</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
@@ -14,7 +14,7 @@
 
 <body>
     <div class="jumbotron text-center col-md-10 offset-1">
-        <h1 class="display-3">Employee Timesheet</h1>
+        <h1 class="display-3">Train Time</h1>
     </div>
     <!-- start container for employee form -->
 
@@ -24,34 +24,34 @@
     <!-- start employee results container -->
     <div class="container">
         <!-- start employee results -->
-        <div class="card m-2 mb-4" id="emplpoyee-results">
-            <div class="card" id="employee-results-header">
+        <div class="card m-2 mb-4" id="train-results">
+            <div class="card" id="train-results-header">
                 <div class="card-header">
                     <!-- employee results header -->
-                    <span>Current Employee</span>
+                    <span>Current Train Schedule</span>
                 </div>
                 <table class="table table-hover table-bordered">
                     <thead class="thead-light">
                         <!-- employee table header -->
                         <tr>
-                            <th>#</th>
-                            <th>Employee Name</th>
-                            <th>Role</th>
-                            <th>Date Started</th>
-                            <th>Rate $/mo</th>
+                            
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
                         </tr>
                     </thead>
                     <!-- /employee table header -->
                     <!-- emplpyee input displays below -->
                     <tbody id="add-employee-info">
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Ivan</td>
-                            <td>CTO</td>
-                            <td>02/19/2019</td>
-                            <td>*months worked</td>
-                            <td>*monthly rate</td>
-                            <td>*total billed</td>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
                         </tr>
                     </tbody>
                     <!-- /employee input -->
@@ -62,29 +62,27 @@
     </div>
 
     <div class="container">
-        <div class="card m-2 mb-4" id="employee-parameters">
+        <div class="card m-2 mb-4" id="train-parameters">
             <!-- start employee form -->
             <div class="card-header">
-                <span>Add Employee</span>
+                <span>Add Train</span>
             </div>
             <div class="card-body p-4">
                 <div class="form-group">
-                    <label for="name-employee">Employee Name</label>
-                    <input type="text" class="form-control" id="name-employee" aria-describedby="employeeName"
-                        placeholder="Enter full name" required>
+                    <label for="train-name">Train Name</label>
+                    <input type="text" class="form-control" id="train-name" aria-describedby="trainName" required>
                 </div>
                 <div class="form-group">
-                    <label for="role">Role </label>
-                    <input type="text" class="form-control" id="role" aria-describedby="employeeRole" placeholder="Enter your role"
-                        required>
+                    <label for="destination">Destination </label>
+                    <input type="text" class="form-control" id="destination" aria-describedby="destination" required>
                 </div>
                 <div class="form-group">
-                    <label for="start-date">Start Date</label>
-                    <input type="date" class="form-control" id="start-date" aria-describedby="startDate" required>
+                    <label for="start-time">First Train Time (HH:mm - military time)</label>
+                    <input type="time" class="form-control" id="start-time" required>
                 </div>
                 <div class="form-group">
-                    <label for="rate">Rate ($/mo)</label>
-                    <input type="number" class="form-control" id="rate" aria-describedby="employeeRate" placeholder="Enter billable rate per month"
+                    <label for="frequency">Frequency(min)</label>
+                    <input type="number" class="form-control" id="frequency" aria-describedby="frequency" 
                         required>
                 </div>
                 <div class="row">
