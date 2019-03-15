@@ -15,14 +15,32 @@ var config = {
       this.destination = destination;
       this.startTime = startTime;
       this.frequency = frequency;
-      // this.nextarrival = function(){
-
-      // }
-      // this.minutesaway = function (){
-
-      // }
+      this.nextarrival = calcNextTime;
+      this.minutesaway = calcMin;
+    
       
+    this.calcNextTime = function(){
+        var firstTimeConverted = moment(startTime, "HH:mm").subtract(1, "years");
+        var currentTime = moment();
+        var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+        var tRemainder = diffTime % tFrequency;
+        var tMinutesTillTrain = tFrequency - tRemainder;
+        return currentTime.add(tMinutesTillTrain, "minutes");
+      }
+
+      this.calcMin() = function(){
+        var firstTimeConverted = moment(startTime, "HH:mm").subtract(1, "years");
+        var currentTime = moment();
+        var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+        var tRemainder = diffTime % tFrequency;
+        return tFrequency - tRemainder
+      }
+
     }
+
+
+      
+    
     }
     $("#submit-button").on("click", function () {
       let name = $("#train-name").val().trim();
