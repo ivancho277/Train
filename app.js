@@ -57,7 +57,7 @@ $("#submit-button").on("click", function () {
   let name = $("#train-name").val().trim();
   let destination = $("#destination").val().trim();
   let startTime = $("#start-time").val();
-  let rate = $("#frequency").val().trim();
+  let frequency = $("#frequency").val().trim();
 
   let train = new Train(
     name,
@@ -72,8 +72,15 @@ $("#submit-button").on("click", function () {
   database.ref().push(JSON.parse(JSON.stringify(train)));
   console.log(train);
 
-
 })
+
+$("#clear-button").on("click", function() {
+  $("#train-name").empty();
+  $("#destination").empty();
+  $("#start-time").empty();
+  $("#frequency").empty();
+})
+
 database.ref().on("value", function(snapshot) {
 
   var dataTrain = snapshot.val();
@@ -83,12 +90,12 @@ database.ref().on("value", function(snapshot) {
     var tableRow = $("<tr>")
     var tdName = $("<td>").text(name);
     var tdDestination = $("<td>").text(destination);
-    var tdStartTime = $("<td>").text(startTime);
+    //var tdStartTime = $("<td>").text(startTime);
     var tdFrequency = $("<td>").text(frequency);
     var tdNextArrival = $("<td>").text(nextarrival);
     var tdMinutesAway = $("<td>").text(minutesaway);
 
-    tableRow.append(tdName, tdDestination, tdStartTime, tdFrequency, tdNextArrival, tdMinutesAway);
+    tableRow.append(tdName, tdDestination, tdFrequency, tdNextArrival, tdMinutesAway);
     $("#train-info").append(tableRow);
   }
 
